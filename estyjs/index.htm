@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Single Page Application Micro Framework Demo</title>
+    <style></style>
+	
+	<meta charset="utf-8">
+
+    <base href="/">
+     <script src="libs/jquery-1.10.2.min.js"></script>
+	  <script type="text/javascript" src="libs/esty.route.js"></script>
+	 <script type="text/javascript" src="libs/esty.template.js"></script>
+   
+	 <script id="testemplate" type="text/x-jQuery-tmpl">
+        <li>${number}</li>
+
+ </script>
+	
+
+  </head>
+<body>
+
+  <nav>
+    <a href="#home?id=5&name=esty">Contacts</a>
+    <a href="#about">About</a>
+	
+  </nav>
+  
+<div id="app">
+  <section id="home" src="pages/contact-list.htm"></section>
+  <section id="about" src="pages/contact-details.htm"></section>
+</div>
+ 
+
+</body>
+</html>
