@@ -1,36 +1,49 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Single Page Application Micro Framework Demo</title>
     <style></style>
-	
-	<meta charset="utf-8">
 
+    <meta charset="utf-8">
     <base href="/">
-     <script src="libs/jquery-1.10.2.min.js"></script>
-	  <script type="text/javascript" src="libs/esty.route.js"></script>
-	 <script type="text/javascript" src="libs/esty.template.js"></script>
-   
-	 <script id="testemplate" type="text/x-jQuery-tmpl">
+    <!--<script src="libs/jquery-1.10.2.min.js"></script>-->
+    <script type="text/javascript" src="libs/esty.vanilla.route.js"></script>
+    <!--<script type="text/javascript" src="libs/esty.template.js"></script>-->
+
+    <script id="testemplate" type="text/x-jQuery-tmpl">
         <li>${number}</li>
+    </script>
 
- </script>
-	
-
-  </head>
+</head>
 <body>
+    <nav>
+        <a href="#home?id=5&name=esty">Home</a> |
+        <a href="#about/my?id=50&name=abcd">About my</a> |
+        <a href="#about/company">About company</a>
+    </nav>
 
-  <nav>
-    <a href="#home?id=5&name=esty">Contacts</a>
-    <a href="#about">About</a>
-	
-  </nav>
-  
-<div id="app">
-  <section id="home" src="pages/contact-list.htm"></section>
-  <section id="about" src="pages/contact-details.htm"></section>
-</div>
- 
+    <div id="app">
+        <section id="home"></section>
+        <section id="aboutmy"></section>
+        <section id="aboutcompany"></section>
+    </div>
 
+    <script>
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var route = [
+                        { pageLocation: "home.html", pageTitle: "Home Page", displayUrl: 'home', section: "#home", isContentLoadingEverytime: false },
+                        { pageLocation: "aboutmy.html", pageTitle: "About my", displayUrl: 'about/my', section: "#aboutmy", isContentLoadingEverytime: true },
+                        { pageLocation: "aboutcompany.html", pageTitle: "About company", displayUrl: 'about/company', section: "#aboutcompany", isContentLoadingEverytime: true }
+            ];
+
+            var app = new EstyJs();
+            app.routes = route;
+            app.initPage();
+        })
+
+     
+    </script>
 </body>
 </html>

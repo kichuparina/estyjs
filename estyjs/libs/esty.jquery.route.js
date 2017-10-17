@@ -1,4 +1,4 @@
-var _self;
+﻿var _self;
 function EstyJs() {
     this.routes = [];
     _self = this;
