@@ -72,6 +72,10 @@
     <Content Include="libs\esty.vanilla.route.js" />
     <Content Include="libs\esty.template.js" />
     <Content Include="libs\jquery-1.10.2.min.js" />
+    <Content Include="resource\css\style.css" />
+    <Content Include="resource\css\style.desktop.css" />
+    <Content Include="resource\css\style.mobile .css" />
+    <Content Include="resource\css\style.tablet.css" />
     <Content Include="template\template.html" />
     <Content Include="views\aboutcompany.html" />
     <Content Include="views\aboutmy.html" />
@@ -83,7 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="plugins\" />
-    <Folder Include="resource\css\" />
     <Folder Include="resource\image\" />
     <Folder Include="resource\js\" />
   </ItemGroup>

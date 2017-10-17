@@ -1,0 +1,8 @@
+﻿/* Style for viewports greater than 320px wide. */ 
+/*@media (min-width: 20em) {
+  .Component {
+    background-color: blue;
+  }
+}*/
+
+@media screen and (min-width: 300px) { /* ...mobile styles here... */ }
